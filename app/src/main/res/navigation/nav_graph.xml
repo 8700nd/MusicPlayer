@@ -10,5 +10,13 @@
         android:name="com.example.examplemusicplayer.ui.home.HomeFragment"
         android:label="@string/home_fragment_label"
         tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_FirstFragment_to_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="com.example.scoutmusicplayer.ui.settings.SettingsFragment"
+        android:label="Settings" />
 </navigation>

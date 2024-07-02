@@ -36,6 +36,11 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.2"
     }
 }
 
@@ -51,6 +56,7 @@ val espressoVersion = "3.3.0"
 val recyclerView = "1.3.2"
 val lifecycle = "2.7.0"
 val timberVersion = "5.0.1"
+val lottieVersion = "6.4.1"
 
 dependencies {
     implementation("androidx.core:core-ktx:$coreKtxVersion")
@@ -68,7 +74,13 @@ dependencies {
     implementation("io.coil-kt:coil:2.6.0")
     implementation("androidx.test:monitor:1.6.1")
     implementation("androidx.test.ext:junit-ktx:1.1.5")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.7")
+    implementation("androidx.activity:activity-compose:1.9.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1")
+    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("com.airbnb.android:lottie-compose:$lottieVersion")
 
     testImplementation("junit:junit:$junitVersion")
     androidTestImplementation("junit:junit:4.12")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.6.7")
 }
